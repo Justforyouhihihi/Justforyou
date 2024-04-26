@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just for you, Lojan</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffd1dc; /* Pink background */
+        text-align: center;
+    }
+    #question {
+        font-size: 24px;
+        margin-top: 50px;
+    }
+    #buttons {
+        margin-top: 20px;
+    }
+    button {
+        background-color: #ff1493; /* Pink button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 0 10px;
+    }
+    #heart {
+        display: none;
+        width: 100px;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="question">Do you like me?</div>
+<div id="buttons">
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+</div>
+
+<div id="equation" style="display: none;">
+    <p>Solve this equation:</p>
+    <p>∫ (3x^2 + 2x + 1) dx</p>
+    <input type="text" id="answer">
+    <button id="submitBtn">Submit</button>
+</div>
+<div id="heart">
+    <img src="https://images.app.goo.gl/M6haHCJscmcHNphP7.gif" alt="Click Here">
+</div>
+
+<div id="message" style="display: none;">
+    <p>Hey Lency Lojan, I know you always receive random confessios from different people.<br> I am also battling against myself whether I will confess or not<br> but now I finally have the courage to express it without revealing my identity. <br>
+      But I just want to let you know... that I really like you.</p>
+      <p>I saw you before, as a normal person. But when I tried to look deeper, <br>I fell harder. Your beauty and kindness really made a great impact, <br> that it almost made my heart explode. Even though I <br> may never have spoken to you in person, but I feel like I have known you since the day I first saw you. <p>I never knew that I would willingly learn coding<br> for a reason that my feelings will be told. <br>I'm not expecting something in return, I just want you to know that my feelings exist. <br> That your presence somehow  made a great impact even just from a distance.</p>
+      <p> Ps. My anonymity will remain.<br> Pss. I'm a girl<br>
+      Psss. I suck at writing letters, sorry<br> Pssss. The audio I attached below is broken, can you instead <br> search the song "Shortcut to Heaven by Lullaboy"? Feel every lyrics for once.</p>
+    
+    <audio controls>
+        <source src="your_song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const equationDiv = document.getElementById('equation');
+    const submitBtn = document.getElementById('submitBtn');
+    const heartDiv = document.getElementById('heart');
+    const messageDiv = document.getElementById('message');
+
+    yesBtn.addEventListener('click', function() {
+        equationDiv.style.display = 'none'; // Hide equationDiv if it's open
+        messageDiv.style.display = 'none'; // Hide messageDiv if it's open
+        heartDiv.style.display = 'block';
+    });
+
+    noBtn.addEventListener('click', function() {
+        heartDiv.style.display = 'none'; // Hide heartDiv if it's open
+        messageDiv.style.display = 'none'; // Hide messageDiv if it's open
+        equationDiv.style.display = 'block';
+    });
+
+    submitBtn.addEventListener('click', function() {
+        const answer = document.getElementById('answer').value;
+        if (answer === 'x^3 + x^2 + x') {
+            alert('Correct! But I hope you change your mind. :(');
+        } else {
+            alert('ERROR!! Just give up and say yes, Lency.');
+        }
+    });
+
+    heartDiv.addEventListener('click', function() {
+        equationDiv.style.display = 'none'; // Hide equationDiv if it's open
+        messageDiv.style.display = 'block';
+    });
+</script>
+
+
+</body>
+</html>
